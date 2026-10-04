@@ -1,0 +1,21 @@
+[project]
+name = "comfyui-workflowcanary"
+version = "0.1.0"
+description = "Capture local workflow output baselines and inspect image, ROI, environment and timing regressions."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Ye-Zayne"}]
+dependencies = ["numpy>=1.24", "Pillow>=10"]
+
+[project.urls]
+Repository = "https://github.com/Ye-Zayne/comfyui-workflowcanary"
+"Bug Tracker" = "https://github.com/Ye-Zayne/comfyui-workflowcanary/issues"
+
+[tool.comfy]
+PublisherId = "jinny-wj"
+DisplayName = "WorkflowCanary"
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+testpaths = ["tests"]

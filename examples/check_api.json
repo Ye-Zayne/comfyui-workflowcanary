@@ -1,0 +1,24 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "changed.png"
+    }
+  },
+  "2": {
+    "class_type": "WorkflowCanaryCheck",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "baseline_name": "example-canary",
+      "baseline_root": "",
+      "metadata_json": "{\"seed\":42,\"elapsed_seconds\":12}",
+      "pixel_tolerance": 0.03,
+      "max_changed_fraction": 0.05,
+      "min_ssim": 0.95,
+      "max_time_ratio": 1.5
+    }
+  }
+}
